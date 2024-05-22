@@ -1,0 +1,61 @@
+      html,
+      body {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          user-select: none;
+      }
+
+      #camera,
+      #camera--view,
+      #camera--sensor,
+      #camera--output {
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          user-select: none;
+          pointer-events: stroke;
+      }
+
+      #camera--view,
+      #camera--sensor,
+      #camera--output {
+          transform: scaleX(-1);
+          filter: FlipH;
+      }
+
+      #camera--trigger {
+          width: 65px;
+          background-color: rgb(39, 37, 37);
+          color: white;
+          font-size: 20px;
+          border-radius: 36px;
+          border: 4px solid white;
+          padding: 15px;
+          text-align: center;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          position: fixed;
+          bottom: 50px;
+          left: calc(50% - 50px);
+          cursor: pointer;
+          transition: all 0.5s linear ease-in-out;
+      }
+
+      #camera--trigger:hover {
+          background-color: rgb(83, 81, 81);
+          color: white;
+      }
+
+      .taken {
+          height: 100px !important;
+          width: 100px !important;
+          transition: all 0.5s ease-in;
+          border: solid 3px white;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+          top: 20px;
+          right: 20px;
+          z-index: 2;
+          user-select: none;
+      }
